@@ -1,6 +1,6 @@
 # SMS Gratis
 ![image](https://github.com/Xractz/fsms/blob/master/fsms.jpg)
-SMS Gratis menggunakan api web sms.payuterus.biz dengan menggunakan bahasa pemrograman python
+SMS Gratis menggunakan bahasa pemrograman python
 
 ## Cara Install
 ```
