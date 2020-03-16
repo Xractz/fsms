@@ -8,9 +8,13 @@ s = Session()
 try:
 	print("SMS Gratis by Xractz - IndoSec\nGunakan kode negara (ex: 62xxxxx29)")
 	no = int(input("No    : "))
-	msg = input("Pesan : ")
 except:
-	print("\n\t* Cek nomermu atau pesanmu! *")
+	print("\n\t* Check your number phone! *")
+	sys.exit()
+msg = input("Pesan : ")
+
+if len(msg) < 10:
+	print('\n\t* Pesan yang dikirimkan minimal 10 karakter *')
 	sys.exit()
 
 headers = {
@@ -36,5 +40,7 @@ if 'SMS Gratis Telah Dikirim' in send:
 	print(f"\nSukses dikirim! \n[{no}] => {msg}")
 elif 'MAAF....!' in send:
 	print("\n\t* Mohon Tunggu 15 Menit Lagi Untuk Pengiriman Pesan Yang Sama *")
+elif 'Pesan yang dikirimkan minimal 10 karakter' in send:
+	print('\n\t* Pesan yang dikirimkan minimal 10 karakter *')
 else:
 	print("\n\t* Gagal dikirim! *")
